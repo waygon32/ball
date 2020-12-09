@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ball</title>
+</head>
+<body>
+<form>
+    <img id="ball" src="C:\Users\Thien\Pictures\Saved Pictures\Ball.PNG">
+    <p>Click để di chuyển bóng sang phải</p>
+    <input type="button" value="Click" onclick="moveRight()">
+</form>
+<script>
+    let move = null;
+    move = document.getElementById("ball")
+    function init() {
+        move = document.getElementById("ball")
+        move.style.position = "relative"
+        move.style.left = "0px"
+    }
+    function moveRight() {
+        move.style.left = parseInt(move.style.left) + 20+ "px"
+    }
+        window.onload = init
+</script>
+</body>
+</html>
